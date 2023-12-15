@@ -10,6 +10,7 @@ export class easyGPT {
   };
 
   client: OpenAI;
+  conversations: Record<string, string> = {};
   /**
    *
    * @param token OpenAI API token for making requests
@@ -17,7 +18,6 @@ export class easyGPT {
    */
   constructor(token: string, options?: TeasyGPTDefaults) {
     this.defaults = { ...this.defaults, ...options };
-
     this.client = new OpenAI({ apiKey: token });
   }
 }
