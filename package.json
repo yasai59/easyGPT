@@ -1,6 +1,7 @@
 {
   "name": "easygpt",
   "version": "0.0.1",
+  "type": "module",
   "dependencies": {
     "openai": "^4.22.0"
   }
