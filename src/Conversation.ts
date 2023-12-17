@@ -19,6 +19,11 @@ export class Conversation {
     this.client = client;
   }
 
+  /**
+   *
+   * @param message Message to send to the GPT API
+   * @returns Promise of the response from the API
+   */
   async sendMessage(message: string): Promise<ChatCompletionMessage> {
     this.messages.push({ content: message, role: "user" });
     const requestBody: ChatCompletionCreateParams = {
